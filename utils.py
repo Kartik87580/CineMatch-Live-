@@ -20,7 +20,7 @@ class MovieRecommender:
         # 1. Semantic Search
         query_vector = self.encoder.encode([query])
         distances, indices = self.index.search(query_vector, top_k * 10) #  50 candidates
-        Fetch
+    
         recommendations = []
         candidates_idx = indices[0]
         candidates_dist = distances[0]
